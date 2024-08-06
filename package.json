@@ -2,12 +2,13 @@
   "name": "cafe-de-alturanew",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node scripts/seedDatabase.js"
+    "init-db": "node -r dotenv/config scripts/initDB.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
