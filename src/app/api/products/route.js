@@ -1,9 +1,12 @@
 import { clientPromise } from '../../../../lib/mongodb.js';
 import { Product } from '../../../../models/Product.js';
+import { runMiddleware } from '../../../../lib/cors.js';
+import { NextResponse } from 'next/server';
 
 // Maneja las solicitudes API relacionadas con los productos
-
 export async function GET(request) {
+  await runMiddleware(request, NextResponse.next());
+
   const client = await clientPromise;
   const db = client.db("cafeDB");
 
@@ -15,24 +18,26 @@ export async function GET(request) {
     try {
       const product = await db.collection("products").findOne({ _id: id });
       if (!product) {
-        return new Response(JSON.stringify({ error: 'Product not found' }), { status: 404 });
+        return NextResponse.json({ error: 'Product not found' }, { status: 404 });
       }
-      return new Response(JSON.stringify(product), { status: 200 });
+      return NextResponse.json(product);
     } catch (e) {
-      return new Response(JSON.stringify({ error: 'Error fetching product' }), { status: 500 });
+      return NextResponse.json({ error: 'Error fetching product' }, { status: 500 });
     }
   } else {
     // Obtener todos los productos
     try {
       const products = await db.collection("products").find({}).toArray();
-      return new Response(JSON.stringify(products), { status: 200 });
+      return NextResponse.json(products);
     } catch (e) {
-      return new Response(JSON.stringify({ error: 'Error fetching products' }), { status: 500 });
+      return NextResponse.json({ error: 'Error fetching products' }, { status: 500 });
     }
   }
 }
 
 export async function POST(request) {
+  await runMiddleware(request, NextResponse.next());
+
   const client = await clientPromise;
   const db = client.db("cafeDB");
 
@@ -40,13 +45,15 @@ export async function POST(request) {
     const { brand, price, img_url, available } = await request.json();
     const newProduct = new Product(brand, price, img_url, available);
     const result = await db.collection("products").insertOne(newProduct);
-    return new Response(JSON.stringify(result), { status: 201 });
+    return NextResponse.json(result, { status: 201 });
   } catch (e) {
-    return new Response(JSON.stringify({ error: 'Error creating product' }), { status: 500 });
+    return NextResponse.json({ error: 'Error creating product' }, { status: 500 });
   }
 }
 
 export async function PUT(request) {
+  await runMiddleware(request, NextResponse.next());
+
   const client = await clientPromise;
   const db = client.db("cafeDB");
 
@@ -57,15 +64,17 @@ export async function PUT(request) {
       { $set: updateData }
     );
     if (result.matchedCount === 0) {
-      return new Response(JSON.stringify({ error: 'Product not found' }), { status: 404 });
+      return NextResponse.json({ error: 'Product not found' }, { status: 404 });
     }
-    return new Response(JSON.stringify({ message: 'Product updated successfully' }), { status: 200 });
+    return NextResponse.json({ message: 'Product updated successfully' });
   } catch (e) {
-    return new Response(JSON.stringify({ error: 'Error updating product' }), { status: 500 });
+    return NextResponse.json({ error: 'Error updating product' }, { status: 500 });
   }
 }
 
 export async function DELETE(request) {
+  await runMiddleware(request, NextResponse.next());
+
   const client = await clientPromise;
   const db = client.db("cafeDB");
 
@@ -74,10 +83,10 @@ export async function DELETE(request) {
     const id = url.searchParams.get('id');
     const result = await db.collection("products").deleteOne({ _id: id });
     if (result.deletedCount === 0) {
-      return new Response(JSON.stringify({ error: 'Product not found' }), { status: 404 });
+      return NextResponse.json({ error: 'Product not found' }, { status: 404 });
     }
-    return new Response(JSON.stringify({ message: 'Product deleted successfully' }), { status: 200 });
+    return NextResponse.json({ message: 'Product deleted successfully' });
   } catch (e) {
-    return new Response(JSON.stringify({ error: 'Error deleting product' }), { status: 500 });
+    return NextResponse.json({ error: 'Error deleting product' }, { status: 500 });
   }
 }
