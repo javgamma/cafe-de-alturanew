@@ -1,14 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    // Agrega otras configuraciones válidas aquí
-   
-      // images: {
-      //   domains: ['res.cloudinary.com'],
-      // },
-
-
-      
+ 
         images: {
           remotePatterns: [
             {
