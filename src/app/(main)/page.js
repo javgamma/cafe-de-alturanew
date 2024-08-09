@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect, useState } from 'react'
+// "use client"
+// import React, { useEffect, useState } from 'react'
 
 const Homepage = () => {
 //   const [coffee, setCoffee] = useState(null);
