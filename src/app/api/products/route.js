@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getClient } from '../../lib/mongodb.mjs';
+import { getClient } from '../../../../lib/mongodb.mjs';
 import { v4 as uuidv4 } from 'uuid';
 
 export async function GET() {
