@@ -1,6 +1,6 @@
 // import { getClient } from '../../../../lib/mongodb.mjs';
 import { v4 as uuidv4 } from 'uuid';
-import clientPromise from '../../../../lib/mongodb.mjs';
+import clientPromise from '../../../../lib/mongodb.js';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
