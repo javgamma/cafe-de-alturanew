@@ -4,21 +4,22 @@ import React, { useEffect, useState } from 'react'
 const Homepage = () => {
   const [coffee, setCoffee] = useState(null);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getCoffee = async () => {
-    console.log("Fetching data...");
+    setIsLoading(true);
     try {
       const response = await fetch("https://cafe-de-alturanew-snyr-d3h5kjij7-javmirs-projects.vercel.app/api/products");
-      console.log("Response status:", response.status);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      console.log("Data received:", data);
       setCoffee(data);
     } catch (error) {
       console.error("Fetch error:", error);
-      setError(error);
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -26,17 +27,16 @@ const Homepage = () => {
     getCoffee();
   }, []);
 
-  if (error) return <div>Error: {error.message}</div>;
-  if (!coffee) return <div>Cargando los cafes... Loading...</div>;
+  if (isLoading) return <div>Cargando los cafes...</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!coffee) return <div>No se encontraron cafés.</div>;
 
   return (
     <div>
-      <h1>Lista de Cafés:</h1>
-      <ul>
-        {coffee.map((item) => (
-          <li key={item._id}>{item.brand} - ${item.price}</li>
-        ))}
-      </ul>
+      {/* Renderiza tus datos de café aquí */}
+      {coffee.map(item => (
+        <div key={item.id}>{item.name}</div>
+      ))}
     </div>
   )
 }
