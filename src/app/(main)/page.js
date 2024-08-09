@@ -8,7 +8,7 @@ const Homepage = () => {
   const getCoffee = async () => {
     console.log("Fetching data...");
     try {
-      const response = await fetch("https://cafe-de-alturanew-snyr.vercel.app/api/products");
+      const response = await fetch("https://cafe-de-alturanew-snyr-d3h5kjij7-javmirs-projects.vercel.app/api/products");
       console.log("Response status:", response.status);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
