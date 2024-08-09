@@ -6,6 +6,7 @@ const Homepage = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+//probando merge
   const getCoffee = async () => {n
     setIsLoading(true);
     try {
