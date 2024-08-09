@@ -9,7 +9,7 @@ const Homepage = () => {
   const getCoffee = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("https://cafe-de-alturanew-snyr-d3h5kjij7-javmirs-projects.vercel.app/api/products");
+      const response = await fetch("http://localhost:3000/api/products");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -34,9 +34,10 @@ const Homepage = () => {
   return (
     <div>
       {/* Renderiza tus datos de café aquí */}
-      {coffee.map(item => (
-        <div key={item.id}>{item.name}</div>
-      ))}
+      {Array.isArray(coffee) && coffee.map(item => (
+  <div key={item.id}>{item.name}</div>
+))}
+
     </div>
   )
 }
