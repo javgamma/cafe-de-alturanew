@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
 
 const Shop = () => {
   const [products, setProducts] = useState(null);  // Estado para almacenar los productos
@@ -36,20 +37,50 @@ const Shop = () => {
 
 
   return (
+    // <div className="p-6">
+    //   <h1 className="text-4xl font-bold text-center mb-8">Our Coffee Products</h1>
+    //   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    //     {Array.isArray(products) && products.map((product) => (
+    //       <div key={product.id} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    //         <img
+    //           src={product.image}
+    //           alt={product.name}
+    //           className=" h-48"
+    //         />
+    //         {/* <Image
+    //             src={product.image}
+    //             alt={product.name}
+    //             width={300}
+    //             height={300}
+    //           /> */}
+    //         <div className="p-4">
+    //           <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
+    //           <p className="text-gray-600 mb-4">{product.description}</p>
+    //           <p className="text-lg font-bold text-gray-900">Price: ${product.price}</p>
+    //         </div>
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
     <div className="p-6">
       <h1 className="text-4xl font-bold text-center mb-8">Our Coffee Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {Array.isArray(products) && products.map((product) => (
-          <div key={product.id} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-48 object-cover"
-            />
+          <div key={product.brand} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="relative w-full h-48">
+              <Image
+                src={product.img_url} // Usando la clave correcta 'img_url'
+                alt={product.brand} // Usando la clave correcta 'brand' para el texto alternativo
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-              <p className="text-gray-600 mb-4">{product.description}</p>
-              <p className="text-lg font-bold text-gray-900">Price: ${product.price}</p>
+              <h2 className="text-xl font-semibold mb-2">{product.brand}</h2> {/* Usando la clave correcta 'brand' */}
+              <p className="text-lg font-bold text-gray-900">Price: ${product.price.toFixed(2)}</p> {/* Usando la clave correcta 'price' */}
+              <p className={`text-sm font-semibold ${product.available ? 'text-green-600' : 'text-red-600'}`}>
+                {product.available ? 'Available' : 'Out of Stock'}
+              </p>
             </div>
           </div>
         ))}
