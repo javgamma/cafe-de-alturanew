@@ -5,24 +5,10 @@ const Homepage = () => {
   const [coffee, setCoffee] = useState(null);
   const [error, setError] = useState(null);
 
-  // const getCoffee = async () => {
-  //   console.log("Fetching data...");
-  //   try {
-  //     const response = await fetch("https://cafe-de-alturanew-javmirs-projects.vercel.app/api/products");
-  //     console.log("Response received:", response);
-  //     const data = await response.json();
-  //     console.log("Data parsed:", data);
-  //     setCoffee(data);
-  //   } catch (error) {
-  //     console.error("Fetch error:", error);
-  //     setError(error);
-  //   }
-  // }
-
   const getCoffee = async () => {
     console.log("Fetching data...");
     try {
-      const response = await fetch("https://cafe-de-alturanew.vercel.app/api/products");
+      const response = await fetch("/api/products");
       console.log("Response status:", response.status);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -37,7 +23,6 @@ const Homepage = () => {
   }
 
   useEffect(() => {
-    console.log("Running useEffect...");
     getCoffee();
   }, []);
 
@@ -47,7 +32,11 @@ const Homepage = () => {
   return (
     <div>
       <h1>Lista de Cafés:</h1>
-      <pre>{JSON.stringify(coffee, null, 2)}</pre>
+      <ul>
+        {coffee.map((item) => (
+          <li key={item._id}>{item.brand} - ${item.price}</li>
+        ))}
+      </ul>
     </div>
   )
 }

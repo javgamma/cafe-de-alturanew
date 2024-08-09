@@ -1,5 +1,5 @@
-import {clientPromise} from '../lib/mongodb.js';
-import {Product} from '../models/Product.js';
+import {clientPromise} from '/lib/mongodb.js';
+import {Product} from '/models/Product.js';
 import 'dotenv/config';
 
 const products = [
