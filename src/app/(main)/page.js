@@ -6,7 +6,7 @@ const Homepage = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const getCoffee = async () => {
+  const getCoffee = async () => {n
     setIsLoading(true);
     try {
       const response = await fetch("https://cafe-de-alturanew.vercel.app/api/products");
