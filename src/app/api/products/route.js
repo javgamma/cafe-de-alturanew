@@ -2,27 +2,17 @@ import { clientPromise } from '/lib/mongodb.js';
 import { Product } from '/models/Product.js';
 import { NextResponse } from 'next/server';
 
+
 export async function GET(request) {
   try {
     const client = await clientPromise;
     const db = client.db("cafeDB");
 
-    const url = new URL(request.url);
-    const id = url.searchParams.get('id');
-
-    if (id) {
-      const product = await db.collection("products").findOne({ _id: new ObjectId(id) });
-      if (!product) {
-        return NextResponse.json({ error: 'Product not found' }, { status: 404 });
-      }
-      return NextResponse.json(product);
-    } else {
-      const products = await db.collection("products").find({}).toArray();
-      return NextResponse.json(products);
-    }
+    const products = await db.collection("products").find({}).toArray();
+    return NextResponse.json(products);
   } catch (e) {
-    console.error(e);
-    return NextResponse.json({ error: 'Error fetching products' }, { status: 500 });
+    console.error('MongoDB connection error:', e);
+    return NextResponse.json({ error: 'Error connecting to database' }, { status: 500 });
   }
 }
 
