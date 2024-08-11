@@ -12,6 +12,7 @@ const Shop = () => {
     setIsLoading(true);  // Indicar que la carga de datos ha comenzado
     try {
       const response = await fetch("https://cafe-de-alturanew.vercel.app/api/products");
+      console.log(response);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
