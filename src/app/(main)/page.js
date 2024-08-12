@@ -1,11 +1,13 @@
 // "use client"
 // import React, { useEffect, useState } from 'react'
 import Image from "next/image"
+import WrapperCardsHome from "./WrapperCardsHome"
 
 const Homepage = () => {
 
 
   return (
+    <>
     <header className="h-[486px] flex justify-center items-center pt-16">
     <div className="flex justify-center items-center gap-6">
       <div className="w-[588px] max-h-[232px] flex flex-col justify-items-center gap-4">
@@ -34,6 +36,8 @@ const Homepage = () => {
       />
       </div>
   </header>
+  <WrapperCardsHome/>
+  </>
   )
 }
 
