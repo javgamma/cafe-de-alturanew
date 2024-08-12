@@ -1,6 +1,7 @@
 // "use client"
 // import React, { useEffect, useState } from 'react'
 import Image from "next/image"
+import NewsSection from "./NewsSection"
 import WrapperCardsHome from "./WrapperCardsHome"
 
 const Homepage = () => {
@@ -37,6 +38,7 @@ const Homepage = () => {
       </div>
   </header>
   <WrapperCardsHome/>
+  <NewsSection/>
   </>
   )
 }
