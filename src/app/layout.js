@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import CoffeeCloudProvider from '@/context/CoffeeCloud';
 
 const outfit = Outfit({ 
   subsets: ["latin"],
@@ -16,8 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={outfit.className}>
+        <CoffeeCloudProvider>
         <Navbar/>
         {children}
+        </CoffeeCloudProvider>
         </body>
     </html>
   );
