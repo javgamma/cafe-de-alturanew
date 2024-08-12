@@ -2,41 +2,35 @@
 // import React, { useEffect, useState } from 'react'
 
 const Homepage = () => {
-//   const [coffee, setCoffee] = useState(null);
-//   const [error, setError] = useState(null);
 
-// //probando merge
-// const getCoffee = async () => {
-//   setIsLoading(true);
-//   try {
-//     const response = await fetch("https://cafe-de-alturanew.vercel.app/api/products");
-//     if (!response.ok) {
-//       const errorData = await response.json();
-//       throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
-//     }
-//     const data = await response.json();
-//     setCoffee(data);
-//   } catch (error) {
-//     console.error("Fetch error:", error);
-//     setError(error.message);
-//   } finally {
-//     setIsLoading(false);
-//   }
-// }
-
-//   useEffect(() => {
-//     console.log("Running useEffect...");
-//     getCoffee();
-//   }, []);
-
-//   if (error) return <div>Error: {error.message}</div>;
-//   if (!coffee) return <div>Cargando los cafes... Loading...</div>;
 
   return (
-    <div>
-      <h1>Lista de Cafés:</h1>
-      {/* <pre>{JSON.stringify(coffee, null, 2)}</pre> */}
+    <header className="heroMain">
+    <div className="wrapperHeader">
+      <div className="copyHeroleftSection">
+        <h3>De la planta a tu casa</h3>
+        <h1>El mejor café del mundo, ahora en tu casa</h1>
+        <p>
+          Trabajamos con agricultores de todo el mundo para seleccionar los
+          mejores granos de café y que puedas viajar desde la comunidad de tu
+          hogar
+        </p>
+        <div className="containerButtonsLeftSectionHero">
+          <a id="buttonDiscoverCtALeftSection" href="">
+            Descubrir origenes
+          </a>
+          <a id="buttonCtAbuyCoffeeLeftSection" href="">
+            Comprar café
+          </a>
+        </div>
+      </div>
+      <img
+        id="coffeeHarvest"
+        src="/assets/img/cosechaCafe.png"
+        alt="mano de una persona cosechando café"
+      />
     </div>
+  </header>
   )
 }
 
