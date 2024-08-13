@@ -1,16 +1,9 @@
-// "use client"
-// import React, { useEffect, useState } from 'react'
-import Image from "next/image"
-import Hero from "./Hero"
-import NewsSection from "./NewsSection"
-import WrapperCardsHome from "./WrapperCardsHome"
+import React from 'react'
+import Image from 'next/image'
 
-const Homepage = () => {
-
-
+const Hero = () => {
   return (
-    <>
-    {/* <header className="h-[486px] flex justify-center items-center pt-16">
+    <header className="h-[486px] flex justify-center items-center pt-16">
     <div className="flex justify-center items-center gap-6">
       <div className="w-[588px] max-h-[232px] flex flex-col justify-items-center gap-4">
         <h3 className="text-lg font-semibold leading-6 text-[#2A5B45] h-6 m-0">De la planta a tu casa</h3>
@@ -37,12 +30,8 @@ const Homepage = () => {
         alt={"mano de una persona cosechando café"}
       />
       </div>
-  </header> */}
-  <Hero/>
-  <WrapperCardsHome/>
-  <NewsSection/>
-  </>
+  </header>
   )
 }
 
-export default Homepage
+export default Hero
