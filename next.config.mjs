@@ -11,8 +11,14 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "cafe-de-alturanew.vercel.app",
+        port: "",
+        pathname: "/**",
+      },
     ],
-    domains: ["https://cafe-de-alturanew.vercel.app/"], // Add this line
+    //domains: ["https://cafe-de-alturanew.vercel.app/"], // Add this line
     
   },
 };

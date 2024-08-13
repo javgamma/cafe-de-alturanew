@@ -19,6 +19,7 @@ const NewsSection = () => {
         }
         const data = await response.json();
         setProducts(data);  // Guardar los productos en el estado
+        console.log(data);
       } catch (error) {
         console.error("Error fetching products:", error);
         setError(error.message);  // Guardar el mensaje de error en el estado
@@ -26,6 +27,7 @@ const NewsSection = () => {
         setIsLoading(false);  // Indicar que la carga de datos ha terminado
       }
     };
+    console.log(products);
 
      // Hook useEffect para llamar a fetchProducts cuando se monte el componente
   useEffect(() => {
