@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <header className="h-[486px] flex justify-center items-center pt-16">
+    <header className="h-[486px] flex justify-center items-center ">
     <div className="flex justify-center items-center gap-6">
       <div className="w-[588px] max-h-[232px] flex flex-col justify-items-center gap-4">
         <h3 className="text-lg font-semibold leading-6 text-[#2A5B45] h-6 m-0">De la planta a tu casa</h3>

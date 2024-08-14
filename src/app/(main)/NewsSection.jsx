@@ -43,33 +43,36 @@ const NewsSection = ({quantity,titleCatalogue, margin}) => {
   if (!products || products.length === 0) return <div>No products found.</div>;
 
 
-  const withMargin = "flex flex-col items-center justify-center min-h-[603.39px] gap-10 mt-16"
-  const withoutMargin = "flex flex-col items-center justify-center min-h-[603.39px] gap-10"
-  return (
 
-    <div className={margin?withMargin:withoutMargin}>
-          <h2 className="text-[#2a5b45] text-2xl font-bold ">{titleCatalogue}</h2>
-          <div className="flex flex-wrap justify-center min-h-[391.39px] gap-6">
-            {products.slice(0, quantity).map((coffe, i) => {
-              return (
-                <CardCatalogue
-                  key={i}
-                  brand={coffe.brand}
-                  img={coffe.img_url}
-                  price={coffe.price}
-                />
-              );
-            })}
-          </div>
-          <div className="flex underline gap-4 items-center">
-            <Link className=" text-black font-semibold leading-4" href="/shop">
-              Ver todos
-            </Link>
-            <MoveRight/>
-          
-          </div>
-        </div>
-  )
+
+const withMargin = "flex flex-col items-center justify-center min-h-[603.39px] gap-10 p-[40px] font-semibold";
+const withoutMargin = "flex flex-col items-center justify-center min-h-[603.39px] gap-10";
+
+return (
+  <div className={margin ? withMargin : withoutMargin}>
+    <h2 className="flex text-[#2a5b45] text-2xl font-normal">{titleCatalogue}</h2>
+    <div className="flex flex-wrap justify-center min-h-[391.39px] gap-6">
+      {products.slice(0, quantity).map((coffe, i) => {
+        return (
+          <CardCatalogue
+            key={i}
+            brand={coffe.brand}
+            img={coffe.img_url}
+            price={coffe.price}
+          />
+        );
+      })}
+    </div>
+
+    {!margin && ( // Mostrar este div solo si no hay margen
+      <div className="flex underline gap-4 items-center">
+        <Link className=" text-black font-semibold leading-4" href="/shop">
+          Ver todos
+        </Link>
+        <MoveRight />
+      </div>
+    )}
+  </div>
+);
 }
-
-export default NewsSection
+export default NewsSection;
