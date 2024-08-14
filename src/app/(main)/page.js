@@ -15,7 +15,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <Navbar/>
+      
       <Hero />
       <WrapperCardsHome />
       <NewsSection quantity={4} titleCatalogue={"Novedades"} margin={false} />
