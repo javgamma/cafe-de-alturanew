@@ -45,7 +45,7 @@ const NewsSection = ({quantity,titleCatalogue, margin}) => {
 
 
 
-const withMargin = "flex flex-col items-center justify-center min-h-[603.39px] gap-10 p-[40px] font-semibold";
+const withMargin = "flex flex-col items-center justify-center min-h-[603.39px] gap-10 mt-16 p-[40px] font-semibold";
 const withoutMargin = "flex flex-col items-center justify-center min-h-[603.39px] gap-10";
 
 return (

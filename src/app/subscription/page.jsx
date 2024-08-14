@@ -1,9 +1,14 @@
 import React from 'react'
 
 const Subscription = () => {
+
+
   return (
-    <div>
+    <div >
+      <p>
+
       Hola estas en Subscription
+      </p>
     </div>
   )
 }

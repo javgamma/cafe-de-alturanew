@@ -6,6 +6,7 @@ import { MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import AskFreq from "./AskFreq"
+import Footer from "./Footer"
 import Hero from "./Hero"
 import HeroCoffeeShop from "./HeroCoffeeShop"
 import NewsSection from "./NewsSection"
@@ -28,6 +29,7 @@ const Homepage = () => {
       </div> */}
         <AskFreq/>
         <HeroCoffeeShop/>
+        <Footer/>
     </div>
   );
 }
