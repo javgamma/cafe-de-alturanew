@@ -1,5 +1,5 @@
 import LinksforNavbar from "@/components/LinksforNavbar";
-import Logotype from "@/components/logotype";
+import Logotype from "@/components/Logotype.jsx";
 import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import React from "react";
