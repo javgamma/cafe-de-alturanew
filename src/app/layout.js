@@ -1,7 +1,8 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/LinksforNavbar";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import CoffeeCloudProvider from '@/context/CoffeeCloud';
+import LinksforNavbar from "@/components/LinksforNavbar";
 
 const outfit = Outfit({ 
   subsets: ["latin"]
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={outfit.className}>
         <CoffeeCloudProvider>
-        <Navbar/>
+        <LinksforNavbar/>
         {children}
         </CoffeeCloudProvider>
         </body>

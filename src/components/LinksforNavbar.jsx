@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Navbar = () => {
+const LinksforNavbar = () => {
   return (
     <div className='bg-black text-white h-[60px] flex justify-center items-center'>
       <ul className='flex gap-5'>
@@ -26,4 +26,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default LinksforNavbar
