@@ -1,6 +1,7 @@
 // "use client"
 // import React, { useEffect, useState } from 'react'
 
+import Navbar from "@/components/Navbar"
 import { MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -14,6 +15,7 @@ const Homepage = () => {
 
   return (
     <div>
+      <Navbar/>
       <Hero />
       <WrapperCardsHome />
       <NewsSection quantity={4} titleCatalogue={"Novedades"} margin={false} />

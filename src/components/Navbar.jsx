@@ -1,29 +1,14 @@
-import Link from 'next/link'
 import React from 'react'
+import LinksforNavbar from './LinksforNavbar'
+import Logotype from './logotype'
 
 const Navbar = () => {
   return (
-    <div className='bg-black text-white h-[60px] flex justify-center items-center'>
-      <ul className='flex gap-5'>
-        <li>
-           <Link href="/">Tienda</Link> 
-        </li>
-
-        <li>
-            <Link href="/shop">Suscripcion</Link>
-        </li>
-        <li>
-        <Link href="/contactUs">Para Empresas</Link>
-        </li>
-        <li>
-        <Link href="/aboutUs">Sobre Nosotros</Link>
-        </li>
-        <li>
-        <Link href="/checkout">Contacto</Link>
-        </li>
-      </ul>
+    <div className='flex bg-[#2B2A2B] text-white h-16 items-center justify-around w-full fixed z-[1000] top-0'>
+      <Logotype />
+      <LinksforNavbar/>
     </div>
-  )
+  );
 }
 
 export default Navbar
