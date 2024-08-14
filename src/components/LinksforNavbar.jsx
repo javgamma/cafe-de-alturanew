@@ -3,7 +3,8 @@ import React from 'react'
 
 const LinksforNavbar = () => {
   return (
-    <div className='bg-black text-white h-[60px] flex justify-center items-center'>
+    // <div className='bg-black text-white h-[60px] flex justify-center items-center'>
+    <div className='flex'>
       <ul className='flex gap-5'>
         <li>
            <Link href="/">Tienda</Link> 

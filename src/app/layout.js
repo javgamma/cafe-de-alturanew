@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={outfit.className}>
         <CoffeeCloudProvider>
-        <LinksforNavbar/>
+      
         {children}
         </CoffeeCloudProvider>
         </body>
