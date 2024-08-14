@@ -6,7 +6,7 @@ import { CoffeeCloud } from '@/context/CoffeeCloud';
 import CardCatalogue from '@/components/CardCatalogue';
 import NewsSection from '../(main)/NewsSection';
 
-const Shop = () => {
+const Shop = ({quantity,titleCatalogue,margin}) => {
   
 
   return (

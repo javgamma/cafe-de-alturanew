@@ -12,7 +12,7 @@ const WrapperCardsHome = () => {
 
   return (
     <>
-    <div className="flex h-[380px] bg-cover bg-no-repeat bg-center flex-col items-center justify-center gap-6 content-center m-0" style={{ backgroundImage: `url('/images/cupCoffeeBgCard.png')` }}>
+    <div className="flex h-[380px] bg-cover bg-no-repeat bg-center flex-col items-center justify-center gap-6 content-center m-[0px]" style={{ backgroundImage: `url('/images/cupCoffeeBgCard.png')` }}>
 
 
     <p className="w-[350px] h-7 text-2xl leading-7 flex justify-center content-center items-center text-white font-medium m-0 p-0">Café con las mejores condiciones</p>
