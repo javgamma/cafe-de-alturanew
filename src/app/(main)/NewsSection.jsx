@@ -69,7 +69,7 @@ return (
         <Link className=" text-black font-semibold leading-4" href="/shop">
           Ver todos
         </Link>
-        <MoveRight />
+        <MoveRight/>
       </div>
     )}
   </div>

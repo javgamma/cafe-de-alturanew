@@ -1,4 +1,4 @@
-import Navbar from "@/components/LinksforNavbar";
+import Navbar from "@/components/Navbar";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import CoffeeCloudProvider from '@/context/CoffeeCloud';
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={outfit.className}>
         <CoffeeCloudProvider>
-      
+        <Navbar/>
         {children}
         </CoffeeCloudProvider>
         </body>
