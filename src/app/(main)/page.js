@@ -7,6 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import AskFreq from "./AskFreq"
 import Hero from "./Hero"
+import HeroCoffeeShop from "./HeroCoffeeShop"
 import NewsSection from "./NewsSection"
 import WrapperCardsHome from "./WrapperCardsHome"
 
@@ -26,6 +27,7 @@ const Homepage = () => {
         <MoveRight/>
       </div> */}
         <AskFreq/>
+        <HeroCoffeeShop/>
     </div>
   );
 }
