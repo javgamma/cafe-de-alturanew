@@ -1,6 +1,6 @@
 import React from 'react'
-import LinksforNavbar from './LinksforNavbar'
-import Logotype from './Logotype'
+import LinksforNavbar from './LinksforNavbar.jsx'
+import Logotype from './Logotype.jsx'
 
 const Navbar = () => {
   return (
