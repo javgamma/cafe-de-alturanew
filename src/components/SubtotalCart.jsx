@@ -1,3 +1,4 @@
+import ProductInBasket from '@/app/basket/ProductInBasket'
 import React from 'react'
 import { Button } from './ui/button'
 
@@ -13,6 +14,7 @@ const SubtotalCart = () => {
                 <p className='w-[83px] h-6 text-lg font-semibold leading-6 text-left m-0'>Productos</p>
                 <div className='w-[159.32] border border-solid border-[fuchsia]'>hola!</div>
                 <p id="selectShipping">Seleccionar Envío</p>
+                <ProductInBasket/>
             </div>
             <div className='flex flex-col w-96 h-[280px] box-border items-center justify-center gap-4 bg-[#F7F5F3] border-2 border-solid border-[rgb(19,109,32)]'>
                 <div className='flex flex-col box-border gap-4'>
