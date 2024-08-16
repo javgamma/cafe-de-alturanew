@@ -6,6 +6,7 @@ import { MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import AskFreq from "./AskFreq"
+import Copyright from "./Copyright"
 import Footer from "./Footer"
 import FormHome from "./FormHome"
 import Hero from "./Hero"
@@ -26,6 +27,7 @@ const Homepage = () => {
       <HeroCoffeeShop/>
       <FormHome/>
       <Footer/>
+      <Copyright/>
 
     </div>
   );
