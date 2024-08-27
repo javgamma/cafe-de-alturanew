@@ -1,6 +1,6 @@
 "use client"
 import React, { useContext } from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Clipboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { CoffeeCloud } from '@/context/CoffeeCloud';
