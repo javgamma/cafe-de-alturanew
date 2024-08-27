@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import CoffeeCloudProvider from '@/context/CoffeeCloud';
 import LinksforNavbar from "@/components/LinksforNavbar";
+import Copyright from "./(main)/Copyright";
 
 const outfit = Outfit({ 
   subsets: ["latin"]
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <CoffeeCloudProvider>
         <Navbar/>
         {children}
+        <Copyright/>
         </CoffeeCloudProvider>
         </body>
     </html>

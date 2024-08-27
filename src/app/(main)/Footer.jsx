@@ -16,13 +16,13 @@ const Footer = ({ way }) => {
             </p>
             <div className="w-[182px] h-12 flex gap-2 justify-center items-center flex-row rounded bg-[#515051]">
               <Phone />
-              <Link href="">+34 919 49 05 18</Link>
+              <Link href="/">+34 919 49 05 18</Link>
             </div>
             <div className="w-[232px] h-12 flex gap-2 justify-center items-center flex-row rounded bg-[#515051]">
               <Mail />
-              <a id="buttonMailFooter" href="">
+              <Link id="buttonMailFooter" href="/">
                 hola@cafedealtura.com
-              </a>
+              </Link>
             </div>
           </div>
           <LinksforNavbar way={"col"} />
@@ -30,13 +30,13 @@ const Footer = ({ way }) => {
             className="flex flex-col absolute w-[255.33px] h-20 gap-4 text-sm  leading-4 no-underline m-0 p-0 left-[800px] top-[3px];
                 list-style: none"
           >
-            <li>
+            <li className="hover:bg-[#F7F5F31A] rounded-sm p-2 cursor-pointer">
               <a href="">Politica de privacidad</a>
             </li>
-            <li>
+            <li className="hover:bg-[#F7F5F31A] rounded-sm p-2 cursor-pointer">
               <a href="">Politica de cookies</a>
             </li>
-            <li>
+            <li className="hover:bg-[#F7F5F31A] rounded-sm p-2 cursor-pointer ">
               <a href="">Terminos y condiciones</a>
             </li>
           </ul>

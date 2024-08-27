@@ -1,18 +1,17 @@
 "use client";
 
 import React, { useContext, useEffect } from 'react';
-import Image from 'next/image';
 import { CoffeeCloud } from '@/context/CoffeeCloud';
 import CardCatalogue from '@/components/CardCatalogue';
-import NewsSection from '../(main)/NewsSection';
+import NewsSection from '../../components/NewsSection';
 import WrapperCardsHome from '../(main)/WrapperCardsHome';
 import Footer from '../(main)/Footer';
 
-const Shop = ({quantity,titleCatalogue,margin}) => {
+const Shop = () => {
   
 
   return (
-    <>
+    <div>
       <NewsSection
         quantity={8}
         titleCatalogue={"Últimos orígenes"}
@@ -20,7 +19,7 @@ const Shop = ({quantity,titleCatalogue,margin}) => {
       />
       <WrapperCardsHome />
       <Footer/>
-    </>
+    </div>
   );
 };
 

@@ -19,7 +19,17 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         green:
-        "flex w-[129px] h-10 rounded opacity-[0px] bg-[#2A5B45] text-[white] items-center justify-center cursor-pointer"
+        "flex w-[129px] h-10 rounded opacity-[0px] bg-[#2A5B45] text-[white] items-center justify-center cursor-pointer",
+        login:
+        "w-[130px] h-[40px] rounded-1 bg-[#515051]",
+        buttonProductCard:
+        "bg-[#2A5B45] w-[60px] h-[32px] rounded-1 opacity-[70%] text-white",
+        buttonModalCart:
+        "bg-[#234352] rounded-[50%]  text-white p-0 m-0",
+        payAndBuy:
+        "flex w-[196px] h-10 rounded opacity-[30%] bg-[#2A5B45] text-[white] items-center justify-center cursor-pointer",
+        backToStore:
+        "flex w-[158px] h-10 rounded opacity-[0px] bg-[#2A5B45] text-[white] items-center justify-center cursor-pointer"
 
       },
       size: {
