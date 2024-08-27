@@ -1,15 +1,22 @@
-import SubtotalCart from '@/components/SubtotalCart'
-import React from 'react'
-import WrapperCardsHome from '../(main)/WrapperCardsHome'
+"use client"
+import React, { useContext, useEffect, useState } from'react';
+import Basket from '../basket/Basket.jsx';
+import SubtotalCart from'@/components/SubtotalCart';
+import { CoffeeCloud } from '@/context/CoffeeCloud.jsx';
 
-const Basket = () => {
+const BasketPage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div>
-      <WrapperCardsHome/>
-      <p>EStas en la cesta ahora mismo</p>
-      <SubtotalCart/>
-    </div>
-  )
-}
+   
+      <SubtotalCart />
+      </div>
+  );
+};
 
-export default Basket
+export default BasketPage;
