@@ -4,13 +4,13 @@ import { CoffeeCloud } from "@/context/CoffeeCloud"; // Asegúrate de importar e
 import Image from "next/image";
 import { Minus, MinusCircle, Plus, PlusCircle } from "lucide-react";
 
-const Basket = ({price, quantity}) => {
-  const {basket, removeFromBasket, incrementProductQuantity, decrementProductQuantity } =
+const Basket = () => {
+  const {basket, incrementProductQuantity, decrementProductQuantity } =
     useContext(CoffeeCloud);
 
-    if (!Array.isArray(basket)) {
-      return <p>Error: La cesta no es válida.</p>;
-    }    
+    // if (!Array.isArray(basket)) {
+    //   return <p>Error: La cesta no es válida.</p>;
+    // }    
 
 console.log(basket);
 
@@ -20,7 +20,7 @@ console.log(basket);
         basket.map((product) => (
           <div
             key={product.id}
-            className="flex gap-6 w-[776px] h-[55.66px]"
+            className="flex gap-6 w-[776px] h-[55.66px] mb-3 pb-2 border-b-2"
           >
             <div className="flex gap-2 items-center">
               <button
@@ -57,7 +57,7 @@ console.log(basket);
               </p>
             </div>
             <span>{product.price ? (product.price).toFixed(2) : "0.00"} €</span>
-            {/* <button onClick={() => removeFromBasket(product.id)}>Eliminar</button> */}
+                {console.log("Basket de basket", basket)}
           </div>
         ))
       ) : (

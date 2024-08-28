@@ -3,12 +3,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { CircleX, X } from 'lucide-react';
 import SelectedProduct from '@/app/shop/SelectedProduct';
 import { CoffeeCloud } from '@/context/CoffeeCloud';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 const ShoppingCart = ( ) => {
 
-    // const {basket, showCart,setShowCart} = useContext(CoffeeCloud);
   const {
     basket,
+    addToBasket,
     incrementProductQuantity,
     decrementProductQuantity,
     removeFromBasket,
@@ -20,14 +22,11 @@ const ShoppingCart = ( ) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Indica que el componente ya se ha montado
     setIsMounted(true);
   }, []);
 
   if (!isMounted) {
     return null}
-
-
 
   const toggleCartVisibility = () => {
     setShowCart(!showCart);
@@ -52,7 +51,7 @@ const ShoppingCart = ( ) => {
         </button>
       </div>
       {basket.length === 0 ? (
-        <div>El carrito está vacío</div>
+        <div className='text-center'>El carrito está vacío</div>
       ) : (
         <div>
           {basket.map((product) => (
@@ -66,9 +65,13 @@ const ShoppingCart = ( ) => {
               incrementProductQuantity={incrementProductQuantity}
               decrementProductQuantity={decrementProductQuantity}
               removeFromBasket={removeFromBasket}
+              addToBasket={addToBasket}
             />
           ))}
           <div className="mt-4">
+            <Link href="/basket">
+              <Button variant="green" > checkout</Button>
+            </Link>
             <div className="font-bold">
             Total: ${totalPrice.toFixed(2)}
             </div>

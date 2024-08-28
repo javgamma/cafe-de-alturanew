@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { CoffeeCloud } from '@/context/CoffeeCloud';
 import CardCatalogue from '@/components/CardCatalogue';
 import NewsSection from '../../components/NewsSection';
