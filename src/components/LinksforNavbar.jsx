@@ -39,7 +39,7 @@ const LinksforNavbar = ({ way }) => {
           </li>
 
           <li className={liStyle}>
-            <Link href="/subscription">Suscripcion</Link>
+            <Link href="/basket">Suscripcion</Link>
           </li>
           <li className={liStyle}>
             <Link href="/contactUs">Para Empresas</Link>
