@@ -5,7 +5,7 @@ import Link from 'next/link'; // Importa el componente Link
 import { MoveRight } from 'lucide-react'; // Importa el icono MoveRight
 
 const NewsSection = ({ titleCatalogue, quantity, margin }) => {
-  const { products, error, isLoading, addToBasket, setProducts, setIsLoading} = useContext(CoffeeCloud);
+  const { products, error, isLoading } = useContext(CoffeeCloud);
 
   // Renderizar el contenido dependiendo del estado
   if (isLoading) return <div>Loading products...</div>;
@@ -13,23 +13,6 @@ const NewsSection = ({ titleCatalogue, quantity, margin }) => {
   if (!products || products.length === 0) return <div>No products found.</div>;
 
   const className = margin ? "flex flex-col items-center justify-center min-h-[603.39px] gap-10 mt-16 p-[40px] font-semibold" : "flex flex-col items-center justify-center min-h-[603.39px] gap-10";
-
-  // useEffect(() => {
-  //   const getCoffeFetch = async () => {
-  //     try {
-  //       const apiUrl = "https://cafe-de-alturanew.vercel.app/api/products";
-  //       const response = await fetch(apiUrl);
-  //       const data = await response.json();
-  //       setProducts(data);
-  //       setIsLoading(false);
-  //     } catch (error) {
-  //       console.error(error);
-  //       setError("Error al cargar los productos");
-  //       setIsLoading(false);
-  //     }
-  //   };
-  //   getCoffeFetch();
-  // }, []);
 
   return (
     <div className={className}>

@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 const SubtotalCart = () => {
 
-  const {basket,totalItems,totalPrice} = useContext(CoffeeCloud);
+  const {totalItems,totalPrice} = useContext(CoffeeCloud);
 
   
   return (
