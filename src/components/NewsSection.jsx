@@ -17,7 +17,7 @@ const NewsSection = ({ titleCatalogue, quantity, margin }) => {
   return (
     <div className={className}>
       <h2 className="flex text-[#2a5b45] text-2xl font-normal">{titleCatalogue}</h2>
-      <div className="flex flex-wrap justify-center min-h-[391.39px] gap-6">
+      <div className="flex flex-wrap justify-center min-h-[391.39px] gap-6 ${products.available}">
         {products.slice(0, quantity).map((coffee,i) => (
           <CardCatalogue
             key={i}
@@ -25,6 +25,7 @@ const NewsSection = ({ titleCatalogue, quantity, margin }) => {
             brand={coffee.brand}
             img={coffee.img_url}
             price={coffee.price}
+            available={coffee.available}
             // onAddToBasket={() => addToBasket(coffee)}
           />
         ))}

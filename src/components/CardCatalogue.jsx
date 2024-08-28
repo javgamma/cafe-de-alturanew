@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { CoffeeCloud } from "@/context/CoffeeCloud";
 
-const CardCatalogue = ({ id, brand, img, price }) => {
+const CardCatalogue = ({ id, brand, img, price,available }) => {
   const { addToBasket } = useContext(CoffeeCloud);
   return (
     <div className="flex flex-col items-center justify-center text-center gap-6 w-[282px] min-h-[391.39px] border rounded-lg border-solid border-[#e3ded7]">
