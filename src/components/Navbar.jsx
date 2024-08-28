@@ -8,6 +8,7 @@ import { Phone, ShoppingCart as ShoppingCartIcon } from 'lucide-react';
 import ShoppingCart from './ShoppingCart.jsx';
 import { Button } from './ui/button.jsx';
 import classNames from 'classnames';
+import Image from 'next/image.js'
 
 const Navbar = () => {
   const { basket, showCart, setShowCart,totalItems} = useContext(CoffeeCloud);
@@ -53,7 +54,7 @@ const Navbar = () => {
             onClick={toggleCartVisibility}
             className="relative bg-transparent border-none cursor-pointer p-2"
           >
-            <ShoppingCartIcon className="text-white" size={24} />
+            <Image src={"/images/Carr.png"} width={20.53} height={24.94} alt="CoffeeIcon" className='flex'/>
             {isMounted && basket.length > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
                 {totalItems}
