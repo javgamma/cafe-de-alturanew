@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         green:
-        "flex w-[129px] h-10 rounded opacity-[0px] bg-[#2A5B45] text-[white] items-center justify-center cursor-pointer",
+        "flex w-[129px] h-10 rounded  bg-[#2A5B45] text-[white] items-center justify-center cursor-pointer",
         login:
         "w-[130px] h-[40px] rounded-1 bg-[#515051]",
         buttonProductCard:
