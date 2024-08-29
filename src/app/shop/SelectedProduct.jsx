@@ -22,7 +22,7 @@ const SelectedProduct = ( {id,
       <Image src={img} width={50} height={50} alt={`${brand} coffee`} className="mr-4" />
       <div>
         <h3 className="font-bold">{brand}</h3>
-        <p className="text-sm text-gray-600">Precio: ${price}</p>
+        <p className="text-sm text-gray-600">Precio: {price.toFixed(2)} €</p>
       </div>
     </div>
     <div className="flex items-center">

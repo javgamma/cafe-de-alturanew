@@ -31,11 +31,11 @@ const NewsSection = ({ titleCatalogue, quantity, margin }) => {
         ))}
       </div>
       {!margin && (
-        <div className="flex underline gap-4 items-center">
-          <Link className="text-black font-semibold leading-4" href="/shop">
+        <div className="flex underline items-center justify-center">
+          <Link className="flex text-black font-semibold leading-4 gap-4" href="/shop">
             Ver todos
+          <MoveRight className='flex' />
           </Link>
-          <MoveRight />
         </div>
       )}
     </div>

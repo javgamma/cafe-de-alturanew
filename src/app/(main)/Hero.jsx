@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 const Hero = () => {
   return (
@@ -14,12 +16,12 @@ const Hero = () => {
           hogar
         </p>
         <div className="w-[321px] h-10 flex gap-4">
-          <button className="w-[168px] h-10 no-underline text-white flex items-center justify-center text-sm leading-4 rounded bg-[#1f1815]">
-            Descubrir origenes
-          </button>
-          <button className="w-[137px] h-10 no-underline text-white flex items-center justify-center text-sm leading-4 rounded  bg-[#2a5b45]">
-            Comprar café
-          </button>
+          <Link href={"/shop"}>
+        <Button variant="black" className="flex cursor-pointer" >Descubrir orígenes</Button>
+        </Link>
+          <Link href={"/shop"}>
+        <Button variant="green" className="flex cursor-pointer" >Comprar café</Button>
+        </Link>
         </div>
       </div>
       <Image

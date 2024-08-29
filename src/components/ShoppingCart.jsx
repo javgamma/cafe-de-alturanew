@@ -37,11 +37,11 @@ const ShoppingCart = ( ) => {
 
   return (
     <div
-    className={`bg-white p-4 w-[500px] min-h-[270px] overflow-y-auto text-black absolute right-5 top-16 transition-opacity duration-300 ${
+    className={`bg-white p-4 w-[500px] min-h-[270px] overflow-y-auto text-black absolute right-5 top-16 border  rounded-lg transition-opacity duration-300 ${
       showCart ? 'opacity-100 visible' : 'opacity-0 invisible'
     }`}
     >
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-4 mt-2 ">
         <h2 className="text-xl font-bold">Carrito de Compras</h2>
         <button
           onClick={toggleCartVisibility}
@@ -68,14 +68,19 @@ const ShoppingCart = ( ) => {
               addToBasket={addToBasket}
             />
           ))}
-          <div className="mt-4">
+          <div className=" flex  flex-col mt-6  border-t">
+            <div className="flex font-bold justify-end mt-4">
+            Total: €{totalPrice.toFixed(2)}
+          </div>
+            <div className='flex gap-4'>
             <Link href="/basket">
               <Button variant="green" > checkout</Button>
             </Link>
-            <div className="font-bold">
-            Total: ${totalPrice.toFixed(2)}
+            <Link href="/basket">
+              <Button variant="red" > Vaciar cesta</Button>
+            </Link>
             </div>
-          </div>
+            </div>
         </div>
       )}
     </div>

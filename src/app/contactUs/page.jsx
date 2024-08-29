@@ -1,10 +1,11 @@
+import PageContruction from '@/components/PageContruction'
 import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div>
-      ahora estas en ContactUs
-    </div>
+  
+     <PageContruction/>
+  
   )
 }
 

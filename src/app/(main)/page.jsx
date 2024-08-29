@@ -7,7 +7,6 @@ import Hero from "./Hero";
 import HeroCoffeeShop from "./HeroCoffeeShop";
 import NewsSection from "@/components/NewsSection";
 import WrapperCardsHome from "./WrapperCardsHome";
-import CoffeeCloudProvider from "@/context/CoffeeCloud";
 
 const Homepage = () => {
   return (
