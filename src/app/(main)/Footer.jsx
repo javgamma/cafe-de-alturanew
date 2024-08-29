@@ -27,7 +27,7 @@ const Footer = ({ way }) => {
           </div>
           <LinksforNavbar way={"col"} />
           <ul
-            className="flex flex-col absolute w-[255.33px] h-20 gap-4 text-sm  leading-4 no-underline m-0 p-0 left-[800px] top-[3px];
+            className="flex flex-col absolute w-[255.33px] h-20  text-sm  leading-4 no-underline m-0 p-0 left-[800px] top-[3px];
                 list-style: none"
           >
             <li className="hover:bg-[#F7F5F31A] rounded-sm p-2 cursor-pointer">

@@ -5,13 +5,15 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+import Link from 'next/link';
+import { MoveRight } from 'lucide-react';
   
 const AskFreq = () => {
   return (
-    <div className="flex justify-center content-center items-center flex-col box-border p-6 bg-[#2A5B45]">
-      <h1 className="text-2xl font-medium leading-7 text-white flex m-0 pb-6">
+    <div className="flex justify-center content-center items-center flex-col box-border p-10 bg-[#2A5B45]">
+      <h2 className="text-2xl font-medium leading-7 text-white flex m-0 pb-8">
         Preguntas Frecuentes
-      </h1>
+      </h2>
 
       <Accordion
         type="single"
@@ -72,6 +74,12 @@ const AskFreq = () => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+      <div className="flex underline  items-center justify-center mt-8">
+          <Link className="flex text-[#FFFFFF] font-semibold leading-4 text-sm  items-center" href="/shop">
+            Resolvemos tus dudas
+          <MoveRight className='flex  text-[#FFFFFF] ml-4' />
+          </Link>
+        </div>
     </div>
   );
 };

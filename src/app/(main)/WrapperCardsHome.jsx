@@ -1,6 +1,6 @@
 import { ClipboardCheck, Gift, Truck } from 'lucide-react'
 import React from 'react'
-import cupCoffeBgCard from './../../../public/images/cupCoffeeBgCard.png'
+
 
 const WrapperCardsHome = () => {
 

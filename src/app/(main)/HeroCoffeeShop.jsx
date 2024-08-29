@@ -14,8 +14,9 @@ const HeroCoffeeShop = () => {
           granos de café antes de hacer tu pedido y llévate un descuento
         </p>
         <div className="w-[118px] h-6 flex items-center gap-4 text-sm font-semibold leading-4 justify-center m-0">
-          <Link className='underline' href="/">Cómo llegar</Link>
+          <Link className='underline flex gap-4' href="/">Cómo llegar
           <MoveRight/>
+          </Link>
         </div>
       </div>
       <Image

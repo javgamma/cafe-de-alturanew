@@ -1,10 +1,11 @@
+import PageContruction from '@/components/PageContruction'
 import React from 'react'
 
 const AboutUs
  = () => {
   return (
     <div>
-      Estas aqui en About Us
+      <PageContruction/>
     </div>
   )
 }

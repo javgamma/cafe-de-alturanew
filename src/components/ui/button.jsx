@@ -20,6 +20,11 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         green:
         "flex w-[129px] h-10 rounded  bg-[#2A5B45] text-[white] items-center justify-center cursor-pointer",
+        red:
+        "flex w-[129px] h-10 rounded  bg-[#EF4444] text-[white] items-center justify-center cursor-pointer",
+
+        black:
+        "w-[168px] h-10 no-underline text-white flex items-center justify-center text-sm leading-4 rounded bg-[#1f1815]",
         login:
         "w-[130px] h-[40px] rounded-1 bg-[#515051]",
         buttonProductCard:
